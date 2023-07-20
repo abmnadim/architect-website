@@ -1,10 +1,22 @@
 /* font from google */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Poiret+One&family=Work+Sans:wght@400;500;600;700;800&display=swap');
 
+/* shared style */
 * {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poiret One', cursive;
     font-family: 'Work Sans', sans-serif;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    /* color: #FFF; */
+    font-size: 1.25rem;
+    background: #FF900E;
+    padding: 20px 25px;
+    color: #FFF;
+    cursor: pointer;
+    border: 0;
 }
 
 /* header style */
@@ -12,27 +24,32 @@ header {
     background: rgba(255, 144, 14, 0.10);
     padding: 50px 240px;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-title {
     font-size: 2.8rem;
     font-weight: 700;
     color: #131313;
 }
-nav > ul {
+
+nav>ul {
     display: flex;
     /* list-style: none;
     margin-right: 30px; */
 }
+
 nav li {
     list-style: none;
     margin-right: 30px;
     font-weight: 500;
     font-size: 1rem;
 }
+
 nav li a {
     text-decoration: none;
     color: #424242;
@@ -42,7 +59,7 @@ nav li a {
 .banner-content {
     max-width: 800px;
     text-align: center;
-    margin: 0 auto;              
+    margin: 0 auto;
     /* flex diyeo kora jaito margin na diye*/
 }
 .banner-title {
@@ -52,4 +69,31 @@ nav li a {
 }
 .banner-description {
     color: #727272;
+}
+.banner img {
+    margin: 20px;
+    width: 100%;
+}
+
+/* responsive media queries */
+/* mobile devices */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 20px;
+    }
+    /* flex-direction very *** */
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* tablet or medium devices */
+@media screen and (min-width 576px) and (max-width: 960px){
+    header {
+        padding: 5 0px;
+    }
+    /* flex-direction very *** */
+    nav {
+        flex-direction: column;
+    }
 }
